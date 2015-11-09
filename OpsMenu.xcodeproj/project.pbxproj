@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DC16B8ED1BF04F220003480A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC16B8EC1BF04F220003480A /* AppDelegate.swift */; };
+		0B1E9B051BF073BB0017848A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1E9B041BF073BB0017848A /* AppDelegate.swift */; };
 		DC16B8EF1BF04F220003480A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC16B8EE1BF04F220003480A /* Assets.xcassets */; };
 		DC16B8F21BF04F220003480A /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC16B8F01BF04F220003480A /* MainMenu.xib */; };
 		DC16B8FD1BF04F220003480A /* OpsMenuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC16B8FC1BF04F220003480A /* OpsMenuTests.swift */; };
@@ -32,8 +32,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B1E9B041BF073BB0017848A /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC16B8E91BF04F220003480A /* OpsMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpsMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		DC16B8EC1BF04F220003480A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC16B8EE1BF04F220003480A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC16B8F11BF04F220003480A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		DC16B8F31BF04F220003480A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -93,7 +93,7 @@
 		DC16B8EB1BF04F220003480A /* OpsMenu */ = {
 			isa = PBXGroup;
 			children = (
-				DC16B8EC1BF04F220003480A /* AppDelegate.swift */,
+				0B1E9B041BF073BB0017848A /* AppDelegate.swift */,
 				DC16B8EE1BF04F220003480A /* Assets.xcassets */,
 				DC16B8F01BF04F220003480A /* MainMenu.xib */,
 				DC16B8F31BF04F220003480A /* Info.plist */,
@@ -249,7 +249,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC16B8ED1BF04F220003480A /* AppDelegate.swift in Sources */,
+				0B1E9B051BF073BB0017848A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,11 +380,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = OpsMenu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = com.variablename.OpsMenu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -392,9 +395,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = OpsMenu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = com.variablename.OpsMenu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -471,6 +476,7 @@
 				DC16B90E1BF04F220003480A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DC16B90F1BF04F220003480A /* Build configuration list for PBXNativeTarget "OpsMenuTests" */ = {
 			isa = XCConfigurationList;
@@ -479,6 +485,7 @@
 				DC16B9111BF04F220003480A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DC16B9121BF04F220003480A /* Build configuration list for PBXNativeTarget "OpsMenuUITests" */ = {
 			isa = XCConfigurationList;
@@ -487,6 +494,7 @@
 				DC16B9141BF04F220003480A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

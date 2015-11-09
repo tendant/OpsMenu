@@ -13,8 +13,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     @IBOutlet weak var window: NSWindow!
 
-
-    @IBOutlet weak var statusMenu: NSMenuItem!
+    @IBOutlet weak var statusMenu: NSMenu!
     
     var statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(NSVariableStatusItemLength)
     
@@ -23,6 +22,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         // Insert code here to initialize your application
         timer = NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: "update", userInfo: nil, repeats: true)
+        statusItem.menu = statusMenu
     }
 
     func applicationWillTerminate(aNotification: NSNotification) {
@@ -30,11 +30,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         timer?.invalidate()
     }
 
+    @IBAction func exit(sender: AnyObject) {
+        NSApplication.sharedApplication().stop(self)
+    }
+    
     func update() {
         let now = NSDate()
         
         let formatter = NSDateFormatter();
-        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss";
+        formatter.dateFormat = "MM-dd HH:mm:ss";
         formatter.timeZone = NSTimeZone(abbreviation: "UTC");
         let utcStr = formatter.stringFromDate(now);
         statusItem.title = utcStr

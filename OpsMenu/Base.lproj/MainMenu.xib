@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1021" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
-        <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9059"/>
     </dependencies>
     <objects>
@@ -14,17 +13,20 @@
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="OpsMenu" customModuleProvider="target">
             <connections>
-                <outlet property="statusMenu" destination="Szm-50-h0u" id="5KL-rl-sQi"/>
+                <outlet property="statusMenu" destination="Tm9-W4-Uhx" id="w2f-1Q-qeX"/>
             </connections>
         </customObject>
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
-        <menu id="h23-RP-YRi">
+        <menu id="Tm9-W4-Uhx">
             <items>
-                <menuItem title="Show UTC Time" id="Szm-50-h0u">
+                <menuItem title="Exit" id="eiV-ox-J0w">
                     <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="exit:" target="Voe-Tx-rLC" id="Wwp-hT-2DX"/>
+                    </connections>
                 </menuItem>
             </items>
-            <point key="canvasLocation" x="1148.5" y="699.5"/>
+            <point key="canvasLocation" x="191.5" y="391.5"/>
         </menu>
     </objects>
 </document>
